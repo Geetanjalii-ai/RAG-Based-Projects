@@ -40,6 +40,15 @@ SYSTEM_PROMPT=(
 
 )
 
+#Tracing
+# TRACING 
+
+LANGSMITH_TRACING = os.getenv("LANGSMITH_TRACING", "false")
+LANGSMITH_ENDPOINT = os.getenv("LANGSMITH_ENDPOINT")
+LANGSMITH_API_KEY = os.getenv("LANGSMITH_API_KEY")
+LANGSMITH_PROJECT = os.getenv("LANGSMITH_PROJECT")
+
+
 def check_api_keys()->None:
 
     """stop early with a clear message if a required API key is not present. """
