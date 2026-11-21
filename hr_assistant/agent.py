@@ -3,12 +3,16 @@
 # pyrefly: ignore[missing-import]
 from langchain.agents import create_agent
 from hr_assistant import config
+from hr_assistant.logger import get_logger
+
+logger = get_logger(__name__)
 
 def create_hr_agent(llm,tools):
     """ Return a langchain agent that can call our tools to answer questions."""
 
-    print("System prompt:", repr(config.SYSTEM_PROMPT))
-    print("Prompt type:", type(config.SYSTEM_PROMPT))
+    logger.info("Creating HR agent with %d tool(s)", len(tools))
 
-    return create_agent(model=llm,tools=tools,system_prompt=config.SYSTEM_PROMPT)
+    agent=create_agent(model=llm,tools=tools,system_prompt=config.SYSTEM_PROMPT)
+    logger.info("HR agent ready!")
+    return agent
 

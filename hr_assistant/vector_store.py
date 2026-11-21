@@ -4,6 +4,9 @@ import os
 from langchain_community.vectorstores import FAISS
 from hr_assistant import config
 from hr_assistant.embeddings import get_embeddings
+from hr_assistant.logger import get_logger
+
+logger = get_logger(__name__)
 
 def build_vector_store(chunks):
     """ Embed every chunk and build a searchable FAISS index in memory. """
