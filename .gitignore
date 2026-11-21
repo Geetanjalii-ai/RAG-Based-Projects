@@ -4,3 +4,16 @@ data/faiss_index
 
 logs/
 *.log
+
+# Python bytecode & cache
+__pycache__/
+*.py[cod]
+
+# Pytest & testing cache
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Evaluation run output logs / reports
+evals/results/
+eval_results*.json
