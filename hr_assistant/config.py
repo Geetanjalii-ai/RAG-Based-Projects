@@ -24,6 +24,10 @@ VECTOR_STORE_PATH=os.path.join("data","faiss_index")
 LLM_MODEL_NAME="openai/gpt-oss-20b"
 EMBEDDING_MODEL_NAME="jina-embeddings-v2-base-en"
 
+# GUARD MODEL 
+
+GUARD_MODEL_NAME = "openai/gpt-oss-safeguard-20b"
+
 #CHUNK/TEXT SPLITTINH CONFIG
 CHUNK_SIZE=500
 CHUNK_OVERLAP=50
