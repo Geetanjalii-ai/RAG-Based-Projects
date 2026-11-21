@@ -1,5 +1,6 @@
 basicragenv
 .env
+.env.docker
 data/faiss_index
 
 logs/
